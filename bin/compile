@@ -4,6 +4,8 @@
 # fail fast
 set -e
 
+cd /app
+
 wget -O zip.zip "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Linux_x64%2F499089%2Fchrome-linux.zip?generation=1504228301450097&alt=media"
 mkdir chromium
 unzip zip.zip -d chromium
