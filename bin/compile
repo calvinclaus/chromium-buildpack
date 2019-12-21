@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+# fail fast
+set -e
+
+wget -O zip.zip "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Linux_x64%2F499089%2Fchrome-linux.zip?generation=1504228301450097&alt=media"
+mkdir chromium
+unzip zip.zip -d chromium
+
+chmod +x /app/chromium/chrome-linux/chrome
+
+export PATH=$PATH:/app/chromium/chrome-linux/
+
+echo "done"
+exit 0
